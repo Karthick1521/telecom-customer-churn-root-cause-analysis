@@ -1,22 +1,14 @@
-📊 Telecom Customer Churn Root Cause Analysis
+# Telecom Customer Churn Root Cause Analysis
 
-SQL + Power BI | End-to-End Data Analyst Project
+## End-to-End Data Analyst Project | SQL + Power BI
 
-🔎 1. Business Problem
+## 1. Business Problem
 
-A telecom company experiencing a 26.54% customer churn rate aims to:
+A telecom company experiencing a 26.54% customer churn rate needed to identify key churn drivers, detect high-risk customer segments, and quantify revenue exposure in order to reduce recurring revenue loss.
 
-Identify key drivers of churn
+The objective was to perform structured data analysis and provide actionable retention strategies based on measurable insights.
 
-Detect high-risk customer segments
-
-Quantify revenue exposure
-
-Provide actionable retention strategies
-
-The goal is to reduce recurring revenue loss by targeting the most vulnerable customer groups.
-
-📁 2. Dataset Overview
+## 2. Dataset Overview
 
 Total Customers: 7,043
 
@@ -24,191 +16,155 @@ Attributes: 21
 
 Target Variable: Churn (Yes/No)
 
-Data includes:
+The dataset includes:
 
 Customer demographics
 
-Service subscriptions
+Service subscription details
 
-Contract details
+Contract information
 
 Payment methods
 
-Billing amounts
+Monthly and total billing data
 
-🛠 3. Tools & Technologies
+## 3. Tools & Technologies Used
 
-MySQL
+MySQL – Data cleaning, transformation, and segmentation
 
-Data cleaning
+Advanced SQL – Aggregations, subqueries, and multi-factor filtering
 
-Feature engineering
+Power BI – Dashboard design and KPI visualization
 
-Segmentation analysis
+DAX – Risk modeling, segmentation logic, and revenue exposure estimation
 
-High-risk profiling
+## 4. Project Workflow
+### Phase 1 – Data Preparation (SQL)
 
-Advanced SQL
+Imported raw telecom dataset into MySQL
 
-Aggregations
+Cleaned missing TotalCharges values
 
-Subqueries
-
-Segmentation logic
-
-Power BI
-
-Executive dashboard design
-
-KPI tracking
-
-Business storytelling
-
-DAX
-
-Churn rate modeling
-
-High-risk flag creation
-
-Revenue exposure estimation
-
-🔄 4. Project Workflow
-Phase 1 – Data Preparation (SQL)
-
-Imported raw telecom dataset
-
-Handled missing TotalCharges
-
-Converted churn flag to binary
+Converted churn variable into binary flag
 
 Validated tenure and billing ranges
 
-Phase 2 – Core Churn Analysis
+Structured dataset for analytical modeling
 
-Overall Churn Rate: 26.54%
+### Phase 2 – Core Churn Analysis
 
-Key segment analysis revealed:
+Overall churn rate identified: 26.54%
 
-Driver	Insight
-Contract Type	42.7% churn among month-to-month customers
-Tenure	47.4% churn within first year
-Payment Method	45.3% churn for electronic check users
-Pricing	Churned customers pay 21% higher monthly charges
-Phase 3 – High-Risk Segment Identification
+Key findings:
 
-High-risk defined as:
+42.7% churn among month-to-month contract customers
+
+47.4% churn within first year of tenure
+
+45.3% churn among electronic check users
+
+Churned customers pay 21% higher monthly charges on average
+
+### Phase 3 – High-Risk Segment Identification
+
+High-risk customers defined as:
 
 Month-to-month contract
 
 Tenure ≤ 12 months
 
-Monthly charges above average
+Monthly charges above overall average
 
 Payment method = Electronic check
 
 Results:
 
-659 customers (9% of total base)
+High-Risk Customers: 659 (9% of total base)
 
-69.5% churn rate
+High-Risk Churn Rate: 69.5%
 
-2.6x higher than baseline
+Risk Multiplier: 2.6x higher than baseline
 
-Contributes ~25% of total churn
+Contributes approximately 25% of total churn
 
-Phase 4 – Revenue Risk Estimation
+### Phase 4 – Revenue Exposure Estimation
 
-High-risk segment monthly revenue exposure: 53.91K
+Monthly revenue exposure within high-risk segment: 53.91K
 
-Estimated revenue at risk (based on churn rate): ~37K monthly
+Estimated monthly revenue at risk (based on churn probability): ~37K
 
-This highlights significant financial impact concentration in a small customer segment.
+This indicates churn concentration in a small but financially significant customer group.
 
-📊 5. Power BI Dashboard Overview
-Page 1 – Churn Drivers
+## 5. Power BI Dashboard Overview
+### Page 1 – Churn Drivers Analysis
 
-KPI Strip (Total Customers, Churn %, Avg Charges)
+KPI Summary (Customers, Churn %, Avg Charges)
 
-Contract Risk Analysis
+Contract Type vs Churn Rate
 
-Lifecycle Risk Analysis
+Customer Lifecycle Risk
 
 Billing Behavior Impact
 
 Pricing Sensitivity Analysis
 
-Page 2 – High-Risk Segmentation
+### Page 2 – High-Risk Segment Analysis
 
 High-Risk KPI Summary
 
-Churn Multiplier Visualization
+Churn Comparison: High-Risk vs Other Customers
 
-High-Risk vs Other Customers Comparison
+Revenue Exposure Metrics
 
-Revenue Exposure Estimate
+Segment Profile Table
 
-🎯 6. Key Business Insights
+## 6. Key Business Insights
 
-89% of churn originates from month-to-month contracts
+Majority of churn originates from flexible contract customers
 
-55% of churn occurs within the first year
+Early lifecycle customers show highest attrition risk
 
-Electronic check users show significantly higher churn risk
+Billing behavior significantly impacts churn probability
 
 9% of customers account for 25% of churn impact
 
-Targeting this segment could significantly reduce revenue loss
+Targeted intervention can meaningfully reduce revenue loss
 
-🚀 7. Strategic Recommendations
+## 7. Strategic Recommendations
 
-Contract Conversion Incentives
+Introduce contract conversion incentives
 
-Promote annual plans for month-to-month users
+Implement early-stage retention engagement programs
 
-Early Lifecycle Engagement
+Promote automatic payment methods
 
-90-day onboarding and retention program
+Optimize pricing bundles for high-charge customers
 
-Auto-Payment Migration Strategy
-
-Encourage electronic check users to switch to auto-pay
-
-Pricing Optimization
-
-Bundle services for high-charge customers
-
-📂 8. Repository Structure
+## 8. Repository Structure
 telecom-customer-churn-root-cause-analysis/
 │
 ├── data/
 ├── sql/
-│   ├── 01_table_creation.sql
-│   ├── 02_data_cleaning.sql
-│   ├── 03_core_analysis.sql
-│   └── 04_high_risk_segmentation.sql
-│
 ├── dashboard/
-│   └── telecom_churn_analysis.pbix
-│
 ├── screenshots/
-│
 ├── churn_dashboard_summary.pdf
-│
 └── README.md
 
-📌 9. What This Project Demonstrates
+## 9. Project Outcomes
 
-End-to-end data analysis workflow
+This project demonstrates:
 
-Strong SQL-based business segmentation
+End-to-end analytical workflow
 
-Ability to translate data into strategic recommendations
+Strong SQL-based segmentation
 
-Dashboard storytelling for executive decision-making
+Business-focused KPI modeling
 
 Revenue risk quantification
 
-💼 10. Author
+Executive-level dashboard storytelling
+
+## Author
 
 Karthick Ravi
 Data Analyst | SQL | Power BI | Business Analytics
